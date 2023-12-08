@@ -1,4 +1,3 @@
-import EditTodoForm from "./EditTodoForm"
 
 
 
@@ -7,7 +6,7 @@ const Todo = ({task, toggleComplete, deleteTodo, editTodo}) => {
   return(
     <div  className="Todo">
        <p onClick={() => toggleComplete(task.id)}
-        className={` ${task.completed}? 'completed': '' `}
+        className={`${task.toggleComplete ? 'completed' : ''}`}
         >{task.task}</p>
        <div>
           <button><span onClick={() => editTodo(task.id)}>.</span></button>
